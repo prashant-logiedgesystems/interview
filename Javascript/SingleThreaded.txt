@@ -1,0 +1,41 @@
+
+Why javascript is single Threaded?
+Ans : 1.JavaScript is single threaded because it was designed to run in a browser environment 
+      2.where the main thread is responsible for handling user interactions, rendering the UI, and executing JavaScript code.
+      3.Running JavaScript on a single thread ensures that the browser remains responsive to user interactions and 
+        that JavaScript code execution does not interfere with other browser activities.
+
+
+            Single Threaded give Benefits:
+            1.Simplicity: JavaScript was designed to be an easy-to-use language for web developers, and the single-threaded model 
+            is simple to understand and work with. It makes it easier to write and debug code since there is only one execution 
+            context and no need to manage multiple threads.
+
+            2.Safety: By limiting JavaScript to a single thread, there is no need to worry about race conditions, deadlocks, and 
+            other synchronization issues that can arise when multiple threads access and modify the same data. This makes it 
+            easier to write reliable and predictable code.
+
+            3.Browser compatibility: The browser environment is the primary target for JavaScript, and 
+                most browsers are single-threaded. By designing JavaScript to be single-threaded, it is
+                easier to ensure compatibility across different browsers and operating systems.
+
+            4.Security: Single-threading can help improve security by preventing malicious code from accessing data or 
+            executing code in unexpected ways. This is especially important in a web environment where scripts from
+            different sources can run on the same page
+
+
+
+Why javascript not Multi-Threaded?
+Ans : 1.Unlike other programming languages, such as Java or C++, which have built-in support for multi-threading
+      2.JavaScript's event-driven architecture and its use of callbacks and 
+      event listeners make it possible to achieve concurrency without the need for multi-threading.
+
+Note:
+Additionally, allowing multiple threads to access and modify the same data in JavaScript can lead to 
+            race conditions (
+                A race condition occurs when two threads access a shared variable at the same time
+            ), 
+where different threads may access or modify the same data at the same time, leading to unpredictable and 
+potentially erroneous behavior.
+
+

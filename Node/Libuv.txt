@@ -1,0 +1,8 @@
+
+what is libuv ?
+    Ans : 1.Libuv is a multi-platform C library
+        2.It provides asynchronous I/O and event-driven programming capabilities for building high-performance and scalable network applications 
+        3.Node js to provide a consistent API for asynchronous I/O operations across different operating systems
+        4.libuv provides an event loop implementation that enables efficient I/O operations by using system-specific mechanisms such as epoll, kqueue, and IOCP.
+        5.It also provides abstractions for handling file I/O, thread pools, timers, and networking sockets
+        6.The library is open-source and is actively maintained and developed by a community of contributors

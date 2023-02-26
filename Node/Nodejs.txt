@@ -28,7 +28,8 @@ Ans : * Nodejs is a single threaded runtime environment which means it uses the 
          ^ These mechanisms allow developers to write code that appears to execute synchronously, while actually executing asynchronously in the background. This approach can improve the responsiveness and performance of applications, 
            particularly those that involve complex I/O operations or user interactions
 
-Event Loop ( it is just a c program)
+Event Loop == ( it is just a c program)== (The event loop is a critical component of the Node.js runtime that enables asynchronous programming and non-blocking I/O operations)
+ 
 
 
 
