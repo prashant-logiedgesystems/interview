@@ -1,2 +1,34 @@
 1 what is Node js
-Ans : Nodejs
+Ans : * Nodejs is a single threaded runtime environment which means it uses the single thread to execute the javascript code,and it doesn't mean only 
+     run one task at a time
+     * Node  js uses the event-driven architecture and non-blocking I/O model ,that allow to handle multiple concurrent operation efficiently
+     * Node.js uses an event-driven architecture and a non-blocking I/O model that allows it to handle multiple concurrent  operations efficiently. When an I/O operation is initiated in Node.js, it is scheduled in the event loop and the thread  moves on to the next operation without waiting for the previous operation to complete. Once the I/O operation is complete, the callback associated with it is added to the event loop for execution.
+
+2.Non-Blocking(async)v/s Blocking(sync):
+
+   in Blocking I/O (sync): code execute line vise line 
+                         ex:
+                              1 const fs=require('fs');
+                              2 const text=fs.readFileSync('data.txt','utf-8);// file is reading synchronously 
+                              3 console.log("message done",text);// this will not execute until or unless line 2 code does'nt    execute completely
+
+   in Non-Blocking I/O (sync): the execution of one task does not wait for the completion of another task,
+                              but instead, the program continues executing other tasks while the first task is in progress.
+                         ex:
+                              1 const fs=require('fs');
+                              2 const text=fs.readFile('data.txt','utf-8, // after file read completely the our callback will execute so till that time asynchronous code will present in libuv 
+                              (err,data)=>{
+                                console.log("data",data);
+                              }
+                              );
+                              3 console.log("message done",text);// this will not execute until or unless line 2 code does'nt    execute completely
+
+   Note: ^ synchronous code has more priority then asynchronous code
+         ^  asynchronous programming is achieved using callbacks, promises, and async/await syntax. 
+         ^ These mechanisms allow developers to write code that appears to execute synchronously, while actually executing asynchronously in the background. This approach can improve the responsiveness and performance of applications, 
+           particularly those that involve complex I/O operations or user interactions
+
+Event Loop ( it is just a c program)
+
+
+
