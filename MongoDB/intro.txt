@@ -1,0 +1,19 @@
+what is MongoDB?
+     mongoDB is a No-SQL Database.
+
+WHAT IS Aggregation Pipeline?
+
+    In MongoDB, the Aggregation Pipeline is a set of stages that allow you to filter, transform, and 
+    analyze data in a collection. Each stage in the pipeline performs a specific operation on the data,
+    such as filtering, grouping, sorting, and calculating aggregate values.
+
+    The Aggregation Pipeline is comprised of several stages, each of which takes a set of documents as input,
+    performs some operation on them, and then passes the output to the next stage. The final output is the result
+    of all the stages in the pipeline
+
+    Some common stages used in the Aggregation Pipeline include:
+
+        $match: Filters documents based on a specified condition.
+        $group: Groups documents together based on a specified key and performs aggregate calculations on the grouped documents.
+        $project: Modifies the document fields and includes or excludes fields from the output.
+        $sort: Sorts documents based on a specified field.
