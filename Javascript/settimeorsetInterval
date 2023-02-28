@@ -1,0 +1,24 @@
+what is a setTimeOut;
+Ans  syntec:  setTimeOut(()=>{},time(in milli second also calle theshold));
+            This function is used to execute a piece of code once after a specified delay (in milliseconds). 
+            The delay is specified as the second argument to the function. For example, the following code will
+             execute the function myFunction() after a delay of 2000 milliseconds (or 2 seconds):
+
+                setTimeout(myFunction, 2000);
+
+
+what is a setInterval;
+Ans  syntec:  setInterval(()=>{},time(in milli second));
+            This function is used to execute a piece of code repeatedly at fixed intervals (also in milliseconds). 
+            The delay is specified as the second argument to the function, just like setTimeout()
+
+
+what is setImmediate()?
+Ans :setImmediate() is actually a special timer that runs in a separate phase of the event loop. 
+     It uses a libuv API that schedules callbacks to execute after the poll phase has completed.
+
+Note:
+        setImmediate() and setTimeout() are similar, but behave in different ways depending on when they are called.
+
+        setImmediate() is designed to execute a script once the current poll phase completes.
+        setTimeout() schedules a script to be run after a minimum threshold in ms has elapsed.
