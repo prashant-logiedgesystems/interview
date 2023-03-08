@@ -1,0 +1,18 @@
+problem  with RDBMS
+ . should know the entire schema upfront
+ . Every record should have the same properties
+ .Altering schema on a running database is expensive
+ .application changes for any change in schema structure
+ . SOL is designed for running only for single server system
+ . Horizontal Scalability is a problem
+ . Scalability is costly [transaction and join are expensice when running on a distributed database]
+ . Many Relational databases do not provide out of the box support of scaling
+ . Normalization [
+                 .it is a technique for desinging the RDBMS for minimising the duplicate of information
+                 .Normalization is also termed as canical synthesis
+                 .it used to keep data consistent and check that no loss of data or data integrity( Data integrity is the accuracy ,completeness,
+                  and quality of data ,data integrity is not same as security ,because data security involve in protecting data from externa and internal
+                  threat and maintaince the privacy,this contribute data integrity by ensuring it has not been compromised by those threats)
+                    ]
+
+ .Fixed schema make it hard to adjust to application needs
