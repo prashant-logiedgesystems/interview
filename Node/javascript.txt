@@ -1,0 +1,6 @@
+9) What do you understand by the first class function in JavaScript?
+        .When functions are treated like any other variable, then those functions are called first-class functions. 
+        .Apart from JavaScript, many other programming languages, such as Scala, Haskell, etc. follow this pattern. 
+        .The first class functions can be passed as a param to another function (callback), or a function can return another 
+        .function (higher-order function). Some examples of higher-order functions that are popularly used are map() and filter().
+

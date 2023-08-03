@@ -1,8 +1,16 @@
+in simple word : Node.js is Server-side scripting which is used to build scalable programs. It is a web application framework built on Google Chrome's JavaScript Engine
+
 1 what is Node js
 Ans : * Nodejs is a single threaded runtime environment which means it uses the single thread to execute the javascript code,and it doesn't mean only 
      run one task at a time
      * Node  js uses the event-driven architecture and non-blocking I/O model ,that allow to handle multiple concurrent operation efficiently
-     * Node.js uses an event-driven architecture and a non-blocking I/O model that allows it to handle multiple concurrent  operations efficiently. When an I/O operation is initiated in Node.js, it is scheduled in the event loop and the thread  moves on to the next operation without waiting for the previous operation to complete. Once the I/O operation is complete, the callback associated with it is added to the event loop for execution.
+     *When an I/O operation is initiated in Node.js, it is scheduled in the event loop and the thread  moves on to the next operation without waiting for the previous operation to complete. Once the I/O operation is complete, the callback associated with it is added to the event loop for execution.
+
+oues How many types of API functions are available in Node.js?
+     There are two types of API functions in Node.js:
+
+     Asynchronous, Non-blocking functions
+     Synchronous, Blocking functions
 
 2.Non-Blocking(async)v/s Blocking(sync):
 
@@ -24,8 +32,8 @@ Ans : * Nodejs is a single threaded runtime environment which means it uses the 
                               3 console.log("message done",text);// this will not execute until or unless line 2 code does'nt    execute completely
 
    Note: ^ synchronous code has more priority then asynchronous code
-         ^  asynchronous programming is achieved using callbacks, promises, and async/await syntax. 
-         ^ These mechanisms allow developers to write code that appears to execute synchronously, while actually executing asynchronously in the background. This approach can improve the responsiveness and performance of applications, 
+         ^ asynchronous programming is achieved using callbacks, promises, and async/await syntax. 
+         ^ These mechanisms allow developers to write code that appears to execute synchronously,while actually executing    asynchronously in the background. This approach can improve the responsiveness and performance of applications, 
            particularly those that involve complex I/O operations or user interactions
 
 Event Loop == ( it is just a c program)== (The event loop is a critical component of the Node.js runtime that enables asynchronous programming and non-blocking I/O operations)

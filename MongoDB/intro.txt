@@ -1,5 +1,5 @@
 what is MongoDB?
-     mongoDB is a No-SQL Database.
+     MongoDB is an open-source, cross-platform, and is based on No-SQL Database.
 
 WHAT IS Aggregation Pipeline?
 
@@ -17,3 +17,42 @@ WHAT IS Aggregation Pipeline?
         $group: Groups documents together based on a specified key and performs aggregate calculations on the grouped documents.
         $project: Modifies the document fields and includes or excludes fields from the output.
         $sort: Sorts documents based on a specified field.
+
+
+WHAT IS mongoDB data type?
+        .null
+        .Boolean
+        .Number [
+            {
+        "year": NumberInt("2020"),
+        "words": NumberLong("95403")
+            }
+            ]
+        .String 
+        .Date
+        .Regular expression
+        .Array
+        .Object ID [
+                    The ObjectId class is the default type for "_id". It is used to generate unique values globally across servers.
+                    The ObjectId uses 12 bytes for storage, where each byte represents 2 hexadecimal digits. In total, an
+                    ObjectId is 24 hexadecimal digits.
+                    The 12-byte ObjectId value consists of:
+
+                            A 4-byte timestamp value that represents the ObjectId‘s generated time measured in seconds since the Unix epoch.
+                            A 5-byte random value.
+                            A 3-byte increment counter, initialized to a random value.
+
+
+
+        ]
+    .Embeded Document[
+        EXAM:
+                {
+            "title": "MongoDB Tutorial",
+            "pages": 945,
+            "author": { //author is embede document because value of document can be another document that referred as Embeded Document
+            "first_name": "John",
+            "last_name": "Doe"
+                 }
+              }
+    ]
