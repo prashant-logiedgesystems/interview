@@ -1,0 +1,6 @@
+db.student.insertOne({
+    name:"pras",
+    car:4
+},{
+    writeConcern:{w:0}// it will fast operation and doesnt give acknowledgement
+})

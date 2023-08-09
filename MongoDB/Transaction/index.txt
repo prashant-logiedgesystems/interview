@@ -1,0 +1,15 @@
+var session = db.getMongo.startSession;
+
+session.startTransaction
+var cust= session.getDatabase('bank').collcetion_name
+cust.updateOne({id:1,{$inc:{bal:100}}})
+cust.updateOne({id:1,{$inc:{bal:-100}}})
+
+if any error occured then,
+ session.abortTransaction();
+//for commit
+
+
+session.commitTransaction()
+
+session.endSession()

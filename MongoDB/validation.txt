@@ -1,0 +1,43 @@
+db.createCollection("collcetion_name",{
+    validator:{
+        $jsonSchema:{
+            require:{"name","password"},
+            properties:{
+                name:{
+                    bsontype:"string",
+                    description:" nam is required "
+                },
+            }
+        }
+    }
+})
+
+if want to change validation 
+db.runCommand(
+    {
+        callmod:"nonfiction",
+        validator:{
+            $jsonSchema:{
+            require:{"name","password","author"},
+            properties:{
+                name:{
+                    bsontype:"string",
+                    description:" nam is required "
+                },
+                author:{
+                    bsontype:"array"
+                    description:"author is"
+                    items:{
+                        bsontype:"object",
+                        required:["name,"email"]
+                        properties:{
+                            
+                        }
+
+                    }
+                }
+            }
+        }
+        }
+    }
+)

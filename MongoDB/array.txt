@@ -1,0 +1,17 @@
+db.student.updateOne(
+    {name:'ream"},
+    {$push:{experience:{id:1,name:"s"}}} //push insert data in db without caring it lies in it or not
+)
+
+// resolving the above error 
+db.student.updateOne(
+    {name:'ream"},
+    {$addToSet:{experience:{id:1,name:"s"}}} //push insert data in db without caring it lies in it or not
+)
+
+//using pull
+
+db.stores.updateMany(
+    { },
+    {$pull:{fruit:{$in:["apple","sweet"]},veg:'red'}}
+)

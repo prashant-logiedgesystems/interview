@@ -1,0 +1,6 @@
+//droping getDatabase
+db.dropDatabse()
+
+
+//only specific getDatabase
+db.collcetion_name.drop();

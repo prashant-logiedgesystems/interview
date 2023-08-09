@@ -1,0 +1,54 @@
+
+db.student.updateMany(
+    {experience:{$elemMatch:{duration:{$lte:12}}}},
+    {
+        $set:{
+            "experience.$":{id:1,name:"prashant}
+        }
+    }
+)
+
+
+
+db.student.updateMany(
+    {experience: {$elemMatch:  {duration:{$lte:1}  }}  },
+    {
+        $set:{
+            "experience.$.neglect":12
+        }
+    }
+    
+    )
+
+
+    //using arrayFilters 
+
+db.student.updatMany(
+
+ //  itrate in array applied filter
+    {
+        experience:{
+            $elemMatch:{
+                duration:{$lt:2}
+            }
+        }
+    }
+
+//updating condition
+{
+    $set:{
+        "experience.$[e].neglect":true;
+    }
+}
+
+//applying arrayFilters;
+{
+    arrayFilters:[
+
+        {"e.duration":{$lte:12}}
+    ]
+}
+
+
+
+)

@@ -1,0 +1,1 @@
+import "file_path" -d "data_name" -c "collcetion_name" --jsonArray --drop (if same name database exit it will drop it so we will use --drop)

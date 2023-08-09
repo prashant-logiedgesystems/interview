@@ -1,0 +1,84 @@
+db.student.find() return point , can apply sort,limit,count,pretty,forEach ,toArray; return list only  record
+db.student.find({}) 
+db.stundent.find({},{writeConcern:{w:0,j:1}})
+db.student.findOne({})
+
+//using regext in find
+db.student.find({name:{$regex:"/^h/}})
+//using text search
+db.studen.find({$text:{$search:"text red"}})
+//using mode in d
+db.student.find({age:{$mod:{2,0}}})
+
+db.stundent.insertOne({})
+db.stundent.insertMany({},{})
+db.student.insertMany([
+    {id:1,name:"p"},
+    {id:2,name:"p"},// id==2 is present in db ,so it will insert id=1in db, but show error during insertion of id=2 and our id=3 also not inser;
+    {id:3,name:"p"},// work in sequence manner
+])
+db.student.insertMany([
+    {id:1,name:"p"},
+    {id:2,name:"p"},// id==2 is present in db ,so it will insert id=1,3in db, ;
+    {id:3,name:"p"},// 
+],{order:false})
+
+
+//updateOne
+db.student.updateOne({},{$set:{}})
+db.student.updateMany({})
+//if not exit insert into 
+db.studen.updateOne({name:"goli",id:4},{$set:{car:"4"}},{upsert:true})
+db.studen.updateMany({},{$rename:{"ageremam"}})
+db.studen.updateMany({},{$set:{"ageremam"}}) 
+db.studen.updateMany({},{$unset:{"ageremam"}}) 
+db.studen.updateMany({},{$mult:[age,2]});
+db.studen.updateMany({age:{$lte:1}},{$inc:{age,2}})
+db.studen.updateMany({age:{$lte:2}},{$set:{mark:{$max:{age,2}}}})
+
+
+
+//aggregate
+db.student.aggregate([
+    {$match:}
+])
+
+//lookup
+
+//left join
+db.student.aggregate{
+    {$lookup:{
+        from:"",
+        localfield:"",
+        foreignfield:"",
+        as:"newfieldname""
+    }}
+}
+
+for inner join 
+
+db.student.aggregate([
+    {$lookup:{
+      from:"",
+        localfield:"",
+        foreignfield:"",
+        as:"newfieldname""  
+    }},
+    {
+        $match:{"myname":{$ne:[]}}
+    }
+])
+
+
+//project 
+db.student.aggregate([
+    {$project:{
+        _id:1,name:1,
+        salary:{$multiply:[12,"$salry"]}
+    }}
+])
+
+//clapped collection 
+
+db.creatCollection("order",{capped:true, max:4,size:1000000})
+

@@ -1,0 +1,12 @@
+db.stundent.aggregate([
+    {$match:{gender:"female"}},
+    {$bucket:{
+        groupBy:"$age"
+        boundaries:[0,20,30],
+        default:"greate than 40",
+        output:{
+            count:{$sum:1},name:{$push:"$name"}
+        }
+
+    }}
+])

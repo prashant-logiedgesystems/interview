@@ -1,0 +1,37 @@
+db.studen.aggregate(
+    [
+       {
+        $group:{
+            _id:{$year:'$dob'},name:{$push:"$name"}
+        }
+       } 
+    ]
+)
+
+using project
+db.student.aggregate(
+    [
+
+      {$project:{
+        dayofMonth:{$dayofMonth:"$dob"},
+        month:{$month:"$dob"},
+        dayofYear:{$dayofYear:"$dob"},
+        hour:{$hour:"$dob"},
+        ms:{$millisecond:"$dob"}
+      }}
+
+    ]
+)
+
+//formating
+db.student.aggregate([
+   {
+    $project:{
+        name:1,
+        dob:{
+            $datetoString:{formate:"%d/%m/%y,date:"$dob"}
+        }
+    }
+   }
+
+])

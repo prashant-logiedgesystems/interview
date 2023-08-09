@@ -1,0 +1,1 @@
+typeof db.student.find({},{name:1,card:1}).name;
