@@ -1,0 +1,67 @@
+db.teacher.aggregate([
+    {$group:{
+        _id:"$age",
+        Listname:{$push:"$name"},
+        fulldoc:{$push:"$$ROOT"}// full object of that current  document
+    }}
+])
+
+
+db.teacher.aggregate([
+    {$match:{gender:'male'}},
+    {$group:{
+        _id:"$age",
+        countage:{$sum:1},
+    }},
+    {
+        $group:{_id:null,maxage:{$max:"countage"}} //it is finally output ,it return only single document
+    }
+])
+
+//using unwind
+
+db.student.aggregate([
+    {$unwind:"$Hobbies"},
+    {
+        $group:{
+            _id:"$age",
+            Hobbiesarray:{$push:"$Hobbies}
+        }
+    }
+])
+
+
+//using avg
+db.teacher.aggregate([
+    {$group:{_id:null,average:{$avg:"$age"}}}
+])
+
+//if Hobbies is array []
+db.studen.aggregate([
+    {$group:"$age",counthobbies:{$sum:{$size:{ifNull:[Hobbies,[]]}}  }}
+])
+
+//removing duuplicat using set
+db.studen.aggregate([
+    {$group:{
+        _id:"$age",
+        Hobbies:{$addToSet:"Hobbies"}
+    }}
+])
+
+
+using filter
+
+db.student.aggregate([
+    {$group:"$age",
+     ageavg:{
+        $avg:{
+            $filter:{
+                input:"$score",
+                as:"score",
+                cond:{$gte:["$age",20]}
+            }
+        }
+     }
+    }
+])
