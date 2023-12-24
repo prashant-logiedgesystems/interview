@@ -1,0 +1,32 @@
+-----------The MySQL SELECT Clause------------
+select *                         from table (give all records)
+select name                      from table (only give name column)
+select name,roll,marks           from table ( only give name,roll,marks column records)
+select distinct name             from table ( only give different value )
+select count(distinct country )  from table  (it will give count only)
+
+
+-----------The MySQL WHERE Clause------------
+#--The WHERE clause is used to filter records.
+#--The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
+
+select * from country   where name="INDIA"
+select * from House     where price between 1,000 and 2,000
+select * from House     where name like "s%"
+select * from House     where location in ('delhi','Kolkota')
+
+------------MySQL  OR,AND--------------------
+select * from House     where location="delhi" and name like "s%"
+select * from House     where location = 'delhi' or name like 's%"
+select * from Customers where City = 'Berlin' or City = 'Stuttgart';
+select * from country   where not name='china'
+select * from country   where not countryname='china' or not countryname='usa'
+
+
+-----MySQL ORDER BY Keyword--------------------
+select * from country   order by countryname  (by default ascending)
+select * from country   order by countryname desc
+select * from customers order by  Country, CustomerName;
+select * from customers order by country asc ,customername desc
+
+
